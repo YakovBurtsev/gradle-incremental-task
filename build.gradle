@@ -1,0 +1,8 @@
+import com.example.IncrementalReverseTask
+
+
+task incrementalReverse(type: IncrementalReverseTask) {
+    inputDir = file('inputs')
+    outputDir = file("$buildDir/outputs")
+    inputProperty = project.properties['taskInputProperty'] ?: 'original'
+}
