@@ -13,3 +13,9 @@ task updateInputs() {
         file('inputs/4.txt').text = 'Content for new file 4.'
     }
 }
+
+task removeInput() {
+    doLast {
+        file('inputs/3.txt').delete()
+    }
+}
