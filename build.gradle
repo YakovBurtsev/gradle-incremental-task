@@ -6,3 +6,10 @@ task incrementalReverse(type: IncrementalReverseTask) {
     outputDir = file("$buildDir/outputs")
     inputProperty = project.properties['taskInputProperty'] ?: 'original'
 }
+
+task updateInputs() {
+    doLast {
+        file('inputs/1.txt').text = 'Changed content for existing file 1.'
+        file('inputs/4.txt').text = 'Content for new file 4.'
+    }
+}
