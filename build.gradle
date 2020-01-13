@@ -19,3 +19,9 @@ task removeInput() {
         file('inputs/3.txt').delete()
     }
 }
+
+task removeOutput() {
+    doLast {
+        file("$buildDir/outputs/1.txt").delete()
+    }
+}
